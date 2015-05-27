@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/bottomList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/tab_bg"
+        android:orientation="horizontal" >
+
+        <LinearLayout style="@style/main_bottom_item" >
+
+            <RadioButton
+                android:id="@+id/tab_index"
+                style="@style/footbar"
+                android:drawableTop="@drawable/tab_index_selector"
+                android:paddingTop="8dp"
+                android:textColor="@color/tab_text_selector"
+                android:text="@string/tab_index" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/main_bottom_item" >
+
+            <RadioButton
+                android:id="@+id/tab_mall"
+                style="@style/footbar"
+                android:drawableTop="@drawable/tab_mall_selector"
+                android:paddingTop="8dp"
+                android:textColor="@color/tab_text_selector"
+                android:text="@string/tab_mall" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/main_bottom_item" >
+
+            <RadioButton
+                android:id="@+id/tab_find"
+                style="@style/footbar"
+                android:drawableTop="@drawable/tab_find_selector"
+                android:paddingTop="8dp"
+                android:textColor="@color/tab_text_selector"
+                android:text="@string/tab_find" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/main_bottom_item" >
+
+            <RadioButton
+                android:id="@+id/tab_my"
+                style="@style/footbar"
+                android:drawableTop="@drawable/tab_my_selector"
+                android:paddingTop="8dp"
+                android:textColor="@color/tab_text_selector"
+                android:text="@string/tab_my" />
+        </LinearLayout>
+    </LinearLayout>
+
+	<View
+	    android:id="@+id/divider"
+	    android:layout_width="match_parent"
+	    android:layout_height="1px"
+	    android:layout_above="@+id/bottomList"
+	    android:background="#ababab" />
+
+    <LinearLayout
+        android:id="@+id/fragmentRoot"
+        android:layout_above="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" />
+
+</RelativeLayout>
