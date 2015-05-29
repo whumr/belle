@@ -12,6 +12,7 @@ import android.widget.TextView;
 public class BaseFragment extends Fragment {
 
 	protected int text_id;
+	protected boolean defalt_ui = true;
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class BaseFragment extends Fragment {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		((TextView)getView().findViewById(R.id.fragment_text)).setText(getString(text_id));
+		if (defalt_ui)
+			((TextView)getView().findViewById(R.id.fragment_text)).setText(getString(text_id));
 	}
 }
