@@ -1,12 +1,103 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/index_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+	    
+	    <com.belle.common.widget.SlideShowView
+	        android:id="@+id/slideshowView"
+	        android:layout_width="fill_parent"
+	        android:layout_height="180dp" />
+	    
+	    <TableLayout android:layout_width="match_parent"
+	        android:layout_height="wrap_content">
+	        
+	        <TableRow android:layout_width="match_parent"
+	            android:gravity="center">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="center"                
+	                android:paddingLeft="8dp"
+	                android:paddingRight="8dp"
+	                android:text="@string/nav_1"
+	                android:drawingCacheQuality="high"
+	                android:drawableTop="@drawable/emoji_0030"/>
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="center"
+	                android:paddingLeft="8dp"
+	                android:paddingRight="8dp"
+	                android:text="@string/nav_2"
+	                android:drawableTop="@drawable/emoji_0031"/>
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="center"
+	                android:paddingLeft="8dp"
+	                android:paddingRight="8dp"
+	                android:text="@string/nav_3"
+	                android:drawableTop="@drawable/emoji_0032"/>
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="center"
+	                android:paddingLeft="8dp"
+	                android:paddingRight="8dp"
+	                android:text="@string/nav_4"
+	                android:drawableTop="@drawable/emoji_0033"/>
+	        </TableRow>
+	        
+	        <TableRow android:layout_width="match_parent"
+	            android:gravity="center">
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="center"                
+	                android:paddingLeft="8dp"
+	                android:paddingRight="8dp"
+	                android:text="@string/nav_1"
+	                android:drawingCacheQuality="high"
+	                android:drawableTop="@drawable/emoji_0030"/>
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="center"
+	                android:paddingLeft="8dp"
+	                android:paddingRight="8dp"
+	                android:text="@string/nav_2"
+	                android:drawableTop="@drawable/emoji_0031"/>
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="center"
+	                android:paddingLeft="8dp"
+	                android:paddingRight="8dp"
+	                android:text="@string/nav_3"
+	                android:drawableTop="@drawable/emoji_0032"/>
+	            <TextView android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:gravity="center"
+	                android:paddingLeft="8dp"
+	                android:paddingRight="8dp"
+	                android:text="@string/nav_4"
+	                android:drawableTop="@drawable/emoji_0033"/>
+	        </TableRow>
+	        
+	    </TableLayout>
+	    
+	    <com.belle.common.widget.ListViewForScrollView android:id="@+id/product_list" 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" />
+    
+    </LinearLayout>
+    
+</ScrollView>
+
+<!-- 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#FFFFFF"  >
-
-    <com.belle.common.widget.SlideShowView
-        android:id="@+id/slideshowView"
-        android:layout_width="fill_parent"
-        android:layout_height="180dp" />
     
 </LinearLayout>
+ -->

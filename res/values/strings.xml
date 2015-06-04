@@ -13,4 +13,12 @@
     <string name="tab_my">我的</string>
 
     <string name="alert_msg_quit">再按一次退出</string>
+
+    <string name="nav_1">test1</string>
+    <string name="nav_2">test2</string>
+    <string name="nav_3">test3</string>
+    <string name="nav_4">test4</string>
+    
+    <string name="NULL"></string>
+    
 </resources>
