@@ -14,6 +14,7 @@ import android.widget.ScrollView;
 import com.belle.R;
 import com.belle.common.BaseFragment;
 import com.belle.common.widget.ProductListAdapter;
+import com.belle.common.widget.SlideShowView;
 import com.belle.entity.Product;
 
 public class IndexFragment extends BaseFragment {
@@ -46,16 +47,20 @@ public class IndexFragment extends BaseFragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		Log.d("aaaaaaaa", "IndexFragment onCreateView");
-		return inflater.inflate(R.layout.index_fragment, container, false);
+		View view = inflater.inflate(R.layout.index_fragment, container, false);
+		ListView list = (ListView)view.findViewById(R.id.product_list);
+		list.setAdapter(new ProductListAdapter(view.getContext(), proList));
+		ScrollView sv = (ScrollView)view.findViewById(R.id.index_scroll);
+		sv.smoothScrollTo(0, 0);
+		return view;
 	}
 	
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		Log.d("aaaaaaaa", "IndexFragment onActivityCreated");
 		super.onActivityCreated(savedInstanceState);
-		ScrollView sv = (ScrollView)getActivity().findViewById(R.id.index_scroll);
-		sv.smoothScrollTo(0, 0);
-		ListView list = (ListView)getActivity().findViewById(R.id.product_list);
-		list.setAdapter(new ProductListAdapter(getActivity(), proList));
+		SlideShowView slideShowView = (SlideShowView)getView().findViewById(R.id.index_slideshow);
+		slideShowView.startAutoPlay();
 	}
+	
 }
