@@ -16,13 +16,16 @@ public class BaseFragment extends Fragment {
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		return inflater.inflate(R.layout.fragment, container, false);
+		View view = inflater.inflate(R.layout.fragment, container, false);
+		if (defalt_ui)
+			((TextView)view.findViewById(R.id.fragment_text)).setText(getString(text_id));
+		return view;
 	}
 	
-	@Override
-	public void onActivityCreated(Bundle savedInstanceState) {
-		super.onActivityCreated(savedInstanceState);
-		if (defalt_ui)
-			((TextView)getView().findViewById(R.id.fragment_text)).setText(getString(text_id));
-	}
+//	@Override
+//	public void onActivityCreated(Bundle savedInstanceState) {
+//		super.onActivityCreated(savedInstanceState);
+//		if (defalt_ui)
+//			((TextView)getView().findViewById(R.id.fragment_text)).setText(getString(text_id));
+//	}
 }

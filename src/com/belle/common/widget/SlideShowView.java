@@ -55,6 +55,9 @@ public class SlideShowView extends FrameLayout {
 		super(context, attrs, defStyle);
 		this.context = context;
 		initUI();
+	}
+	
+	public void startAutoPlay() {
 		if (isAutoPlay) {
 			new Thread(new Runnable() {
 				
@@ -156,27 +159,25 @@ public class SlideShowView extends FrameLayout {
 	 */
 	private class MyPageChangeListener implements OnPageChangeListener {
 
-		boolean isAutoPlay = false;
+		boolean manual = false;
 
 		@Override
 		public void onPageScrollStateChanged(int arg0) {
 			switch (arg0) {
 			case 1:// 手势滑动，空闲中
-				isAutoPlay = false;
+				manual = true;
 				break;
 			case 2:// 界面切换中
-				isAutoPlay = true;
+				manual = false;
 				break;
 			case 0:// 滑动结束，即切换完毕或者加载完毕
 					// 当前为最后一张，此时从右向左滑，则切换到第一张
-				if (viewPager.getCurrentItem() == viewPager.getAdapter()
-						.getCount() - 1 && !isAutoPlay) {
+				if (viewPager.getCurrentItem() == viewPager.getAdapter().getCount() - 1 && manual) {
 					viewPager.setCurrentItem(0);
 				}
 				// 当前为第一张，此时从左向右滑，则切换到最后一张
-				else if (viewPager.getCurrentItem() == 0 && !isAutoPlay) {
-					viewPager
-							.setCurrentItem(viewPager.getAdapter().getCount() - 1);
+				else if (viewPager.getCurrentItem() == 0 && manual) {
+					viewPager.setCurrentItem(viewPager.getAdapter().getCount() - 1);
 				}
 				break;
 			}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" 
+	android:layout_height="130dp"
+	android:orientation="horizontal">
+	<!-- 图片 -->
+    <LinearLayout android:layout_width="100dp" 
+		android:layout_height="match_parent"
+		android:gravity="center_vertical"
+		android:orientation="vertical">
+		<ImageView android:id="@+id/pro_list_item_img"
+			android:layout_height="100dp" 
+			android:layout_width="match_parent"
+			android:scaleType="fitXY"
+			android:src="@drawable/emoji_0030"
+			android:contentDescription="@string/NULL" />
+		<ImageView android:id="@+id/pro_list_item_scoreImg"
+			android:layout_height="30dp" 
+			android:layout_width="match_parent"
+		    android:scaleType="fitXY"
+			android:src="@drawable/emoji_0030"
+			android:contentDescription="@string/NULL" />
+	</LinearLayout>
+	
+	<!-- 说明 -->
+    <LinearLayout android:layout_width="match_parent" 
+		android:layout_height="fill_parent"
+		android:gravity="center_vertical"
+		android:layout_marginLeft="20dp"
+		android:orientation="vertical">
+		<!-- 标题 -->
+		<LinearLayout android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView android:id="@+id/pro_list_item_title" 
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+		</LinearLayout>
+		
+		<!-- 内容(位置、详情) -->
+		<LinearLayout android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView android:id="@+id/pro_list_item_content" 
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"/>
+		</LinearLayout>
+		
+		<!-- 价格、已售 -->
+		<LinearLayout android:layout_width="match_parent" 
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+			<TextView android:id="@+id/pro_list_item_price" 
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"/>
+			<TextView android:id="@+id/pro_list_item_sold" 
+			    android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:layout_marginRight="3dp"
+		        android:gravity="right" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>
