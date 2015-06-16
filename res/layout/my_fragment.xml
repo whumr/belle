@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <SurfaceView android:id="@+id/surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/nav_backgroud" >
+        
+        <ImageView android:id="@+id/nav_back_btn"
+            android:layout_width="20dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/nav_back"
+            android:contentDescription="@string/NULL"/>
+        
+        <TextView
+            android:id="@+id/active_left_txt"
+            android:layout_toRightOf="@+id/nav_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:focusable="true"
+            android:gravity="center" 
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:text="返回"/>
+
+        <TextView
+            android:id="@+id/activity_title_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:text="扫一扫" />
+
+        <ImageView android:id="@+id/active_right_btn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_scan"
+            android:contentDescription="@string/NULL"/>
+    </RelativeLayout>
+</FrameLayout>

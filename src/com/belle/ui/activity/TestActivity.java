@@ -1,4 +1,4 @@
-package com.belle.ui.fragment;
+package com.belle.ui.activity;
 
 import java.io.IOException;
 import java.util.List;
@@ -15,29 +15,18 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.belle.R;
-import com.belle.common.BaseFragment;
+import com.belle.common.BaseActivity;
 
-public class MyFragment extends BaseFragment {
+public class TestActivity extends BaseActivity {
 
 	SurfaceView surface;
 	SurfaceHolder surfaceHolder;
 	
-	public MyFragment() {
-		super();
-		this.text_id = R.string.tab_my;
-	}
-	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-	}
-	
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.my_fragment, container, false);
-		surface = (SurfaceView)view.findViewById(R.id.surface);
-		return view;
+		setContentView(R.layout.my_fragment);
+		surface = (SurfaceView)findViewById(R.id.surface);
 	}
 	
 	@Override
